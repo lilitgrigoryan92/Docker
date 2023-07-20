@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.get('/data', async (req, res) => {
   try {
-    const data = await db.query('SELECT * FROM users');
+    const data = await db.query('SELECT * FROM users ');
     res.json(data);
   } catch (err) {
     console.error(err);
